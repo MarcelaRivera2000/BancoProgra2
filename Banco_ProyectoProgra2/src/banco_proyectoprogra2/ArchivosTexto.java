@@ -72,7 +72,7 @@ public class ArchivosTexto {
                 String p = sc.next();
                 String [] tokens =p.split(",");
                 if (tokens.length >=4) {
-                    Clientes u = new Clientes(tokens[0],Integer.parseInt(tokens[1]),tokens[2],Double.parseDouble(tokens[3]));
+                    Clientes u = new Clientes(tokens[0],tokens[1],tokens[2],Double.parseDouble(tokens[3]));
                     lista.add(u);
                 }
             }

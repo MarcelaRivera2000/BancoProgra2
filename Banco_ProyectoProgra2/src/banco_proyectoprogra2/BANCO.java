@@ -23,12 +23,11 @@ public class BANCO extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         ar.Leer();
-        for (Clientes y :  ar.getLista()) {
+        for (Clientes y : ar.getLista()) {
             clientes.add(y);
-            System.out.println(" das "+y);
         }
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -37,15 +36,17 @@ public class BANCO extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         ClienteEntrante = new javax.swing.JFrame();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        C_numerocuenta = new javax.swing.JTextField();
+        C_saldo = new javax.swing.JTextField();
+        C_usuario = new javax.swing.JTextField();
+        C_valorcompra = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        C_saldo1 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
@@ -97,6 +98,8 @@ public class BANCO extends javax.swing.JFrame {
             }
         });
 
+        jLabel7.setText("TOTAL:");
+
         javax.swing.GroupLayout ClienteEntranteLayout = new javax.swing.GroupLayout(ClienteEntrante.getContentPane());
         ClienteEntrante.getContentPane().setLayout(ClienteEntranteLayout);
         ClienteEntranteLayout.setHorizontalGroup(
@@ -105,12 +108,8 @@ public class BANCO extends javax.swing.JFrame {
                 .addGap(89, 89, 89)
                 .addGroup(ClienteEntranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton4)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(C_saldo, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(ClienteEntranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ClienteEntranteLayout.createSequentialGroup()
-                            .addComponent(jLabel6)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ClienteEntranteLayout.createSequentialGroup()
                             .addGroup(ClienteEntranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel3)
@@ -118,8 +117,16 @@ public class BANCO extends javax.swing.JFrame {
                                 .addComponent(jLabel5))
                             .addGap(44, 44, 44)
                             .addGroup(ClienteEntranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(C_numerocuenta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(C_usuario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ClienteEntranteLayout.createSequentialGroup()
+                            .addGroup(ClienteEntranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel6)
+                                .addComponent(jLabel7))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(ClienteEntranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(C_saldo1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(C_valorcompra, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(71, Short.MAX_VALUE))
         );
         ClienteEntranteLayout.setVerticalGroup(
@@ -127,21 +134,25 @@ public class BANCO extends javax.swing.JFrame {
             .addGroup(ClienteEntranteLayout.createSequentialGroup()
                 .addGap(68, 68, 68)
                 .addGroup(ClienteEntranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(C_numerocuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(ClienteEntranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(C_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addGap(18, 18, 18)
                 .addGroup(ClienteEntranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(C_saldo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(18, 18, 18)
                 .addGroup(ClienteEntranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(C_valorcompra, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(ClienteEntranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(C_saldo1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addComponent(jButton4)
                 .addGap(17, 17, 17))
         );
@@ -205,26 +216,34 @@ public class BANCO extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        try {
-            Banco_ProyectoProgra2.main(null);           
+        
+       try {
+            Banco_ProyectoProgra2.main(null);
         } catch (IOException ex) {
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    public void textoaqui(String j){
+    public void textoaqui(String j) {
+        ClienteEntrante.pack();
+        ClienteEntrante.setLocationRelativeTo(this);
+        ClienteEntrante.setVisible(true);
         try {
-            String[] tokens=j.split(",");
-            double u=Double.parseDouble(tokens[4]);
-            Clientes c=new Clientes(tokens[0], Integer.parseInt(tokens[1]),tokens[2],Double.parseDouble(tokens[3])-u);
-            System.out.println(c);
+            String[] tokens = j.split(",");
+            double u = Double.parseDouble(tokens[4]);
+            Clientes c = new Clientes(tokens[0], tokens[1], tokens[2], Double.parseDouble(tokens[3]) - u);
+            C_saldo.setText(" "+ tokens[3]);
+            C_valorcompra.setText(" " + u);
+            C_usuario.setText(" " + c.getUsuario());
+            C_numerocuenta.setText(" " + c.getN_cuenta());
+            C_saldo1.setText(" " + c.getDineroAcutal());
             clientes.add(c);
             ar.Leer();
             ar.setCliente(c);
             ar.Escribir();
         } catch (Exception ex) {
         }
-}
+    }
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         Principal.pack();
         Principal.setLocationRelativeTo(this);
@@ -269,6 +288,11 @@ public class BANCO extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField C_numerocuenta;
+    private javax.swing.JTextField C_saldo;
+    private javax.swing.JTextField C_saldo1;
+    private javax.swing.JTextField C_usuario;
+    private javax.swing.JTextField C_valorcompra;
     private javax.swing.JFrame ClienteEntrante;
     private javax.swing.JFrame Principal;
     private javax.swing.JButton jButton1;
@@ -281,13 +305,10 @@ public class BANCO extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
-    ArrayList<Clientes> clientes=new ArrayList();
-    ArchivosTexto ar=new ArchivosTexto("./ClientesBanco.txt",clientes);
+    ArrayList<Clientes> clientes = new ArrayList();
+    ArchivosTexto ar = new ArchivosTexto("./ClientesBanco.txt", clientes);
 }

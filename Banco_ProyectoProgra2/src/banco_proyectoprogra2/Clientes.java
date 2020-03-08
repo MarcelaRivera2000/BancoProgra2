@@ -11,14 +11,14 @@ package banco_proyectoprogra2;
  */
 public class Clientes {
     private String usuario,tipo;
-    private int n_cuenta;
+    private String n_cuenta;
     private double dineroAcutal;
 
     public Clientes() {
     }
 
     
-    public Clientes(String usuario, int n_cuenta,String tipo,  double dineroAcutal) {
+    public Clientes(String usuario, String n_cuenta,String tipo,  double dineroAcutal) {
         this.usuario = usuario;
         this.tipo = tipo;
         this.n_cuenta = n_cuenta;
@@ -42,11 +42,11 @@ public class Clientes {
         this.tipo = tipo;
     }
 
-    public int getN_cuenta() {
+    public String getN_cuenta() {
         return n_cuenta;
     }
 
-    public void setN_cuenta(int n_cuenta) {
+    public void setN_cuenta(String n_cuenta) {
         this.n_cuenta = n_cuenta;
     }
 

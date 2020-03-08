@@ -41,8 +41,12 @@ public class Bancos extends ConexionSockets {
                 b.textoaqui(mensajeServidor);
                 System.out.println("a " + h);
             }
+           
+            if (true){
             System.out.println("Fin de la conexión");
-            ss.close();
+            ss.close();    
+            }
+            
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
